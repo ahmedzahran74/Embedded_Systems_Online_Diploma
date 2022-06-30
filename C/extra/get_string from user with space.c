@@ -8,7 +8,7 @@
 
 #include "stdio.h"
 #define N 10
-void fun (char *str,int n)
+void getting_string(char *str,int n)
 {
 	char ch;
 	char flag=0;
@@ -30,7 +30,7 @@ void fun (char *str,int n)
 void main (int argc,char **argv)
 {
 	char s[N+1];
-	fun(s,N);
+	getting_string(s,N);
 	printf("%s",s);
 	fflush(stdin);fflush(stdout);
 
