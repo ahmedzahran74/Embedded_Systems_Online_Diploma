@@ -7,7 +7,7 @@
 
 
 #include "stdio.h"
-#define N 5
+#define N 10
 void fun (char *str,int n)
 {
 	char ch;
