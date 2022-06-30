@@ -41,7 +41,7 @@ void main (int argc,char **argv)
 	char string[N];
 	int length;
 	int last_element;
-	printf("enter the string");
+	printf("enter the string: ");
 	fflush(stdin);fflush(stdout);
 	getting_string(string,N);
 	length=getting_string_length(string);
@@ -52,7 +52,7 @@ void main (int argc,char **argv)
 		string[length-i-1]=string[i]-string[length-i-1];
 		string[i]-=string[length-i-1];
 	}
-
+		printf("the reverse is: ");
 		printf("%s",string);
 		fflush(stdin);fflush(stdout);
 
