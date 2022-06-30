@@ -1,4 +1,12 @@
 /*
+ * searching an element in an array.c
+ *
+ *  Created on: Jun 30, 2022
+ *      Author: AM
+ */
+
+
+/*
  * inserting an element in an array.c
  *
  *  Created on: Jun 30, 2022
@@ -10,7 +18,7 @@ void main (int argc,char **argv)
 {
 	int arr[100];
 	int elements,insert;
-	char location;
+	int location;
 	printf("enter the number of elements :");
 	fflush(stdin);fflush(stdout);
 	scanf("%d",&elements);
