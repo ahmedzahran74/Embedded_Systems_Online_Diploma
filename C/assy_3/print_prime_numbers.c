@@ -20,7 +20,7 @@ bool check_if_anumber_is_prime(int num)
 	}
 	return result;
 }
-int main()
+void print_prime_numbers(void)
 {
 	int num_1,num_2,lower,upper;
 	bool result;
@@ -40,5 +40,9 @@ int main()
 			fflush(stdin);fflush(stdout);
 		}
 	}
-
+}
+int main()
+{
+	print_prime_numbers();
+	return 0;
 }
