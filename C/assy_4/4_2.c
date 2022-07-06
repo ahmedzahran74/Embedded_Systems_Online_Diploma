@@ -66,6 +66,7 @@ void add_multible_distance(distance_feet*dis,distance_feet*sum,int n)
 	{
 		add_two_distance(dis+i,sum);
 
+
 	}
 
 }
