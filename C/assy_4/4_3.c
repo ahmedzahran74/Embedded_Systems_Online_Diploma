@@ -5,7 +5,7 @@
  *      Author: AM
  */
 #include"stdio.h"
-#define N 2
+#define N 5
 typedef struct{
 	float real;
 	float imaj;
