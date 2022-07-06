@@ -71,6 +71,6 @@ void add_multible_distance(distance_feet*dis,distance_feet*sum,int n)
 }
 void print_dist(distance_feet*dist)
 {
-	printf("%d -%f",dist->feet,dist->inch);
+	printf("%d inch %f feet",dist->feet,dist->inch);
 	fflush(stdin);fflush(stdout);
 }
