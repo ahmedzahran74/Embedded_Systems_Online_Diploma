@@ -14,7 +14,6 @@ typedef struct{
 }distance_feet;
 
 void get_distance(distance_feet*dis,int i);
-void get_distance(distance_feet*dis,int i);
 void get_multible_distance(distance_feet*dist,int n);
 void add_two_distance(distance_feet*dis_1,distance_feet*sum);
 void add_multible_distance(distance_feet*dis,distance_feet*sum,int n);
