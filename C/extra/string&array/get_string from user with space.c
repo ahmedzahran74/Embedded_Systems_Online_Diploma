@@ -34,6 +34,7 @@ void getting_string(char *str,int n)
 	if (flag==0)
 	str[n]='\0';
 
+
 }
 void main (int argc,char **argv)
 {
