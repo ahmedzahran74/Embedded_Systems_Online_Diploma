@@ -33,8 +33,6 @@ void getting_string(char *str,int n)
 	}
 	if (flag==0)
 	str[n]='\0';
-
-
 }
 void main (int argc,char **argv)
 {
@@ -42,6 +40,5 @@ void main (int argc,char **argv)
 	getting_string(s,N);
 	printf("%s",s);
 	fflush(stdin);fflush(stdout);
-
 }
 
