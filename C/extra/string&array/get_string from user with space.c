@@ -1,6 +1,14 @@
 /*
  * test.c
  *
+ *  Created on: Jul 7, 2022
+ *      Author: AM
+ */
+
+
+/*
+ * test.c
+ *
  *  Created on: Jun 29, 2022
  *      Author: AM
  */
@@ -19,8 +27,8 @@ void getting_string(char *str,int n)
 		else
 		{
 			str[i]=0;
-			break;
 			flag=1;
+			break;
 		}
 	}
 	if (flag==0)
