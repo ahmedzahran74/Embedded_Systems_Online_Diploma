@@ -19,12 +19,13 @@ void getting_string (char *str,int n)
 		else
 		{
 			str[i]=0;
-			break;
 			flag=1;
+			break;
+			
 		}
 	}
 	if (flag==0)
-	str[N]='\0';
+	str[n]='\0';
 
 }
 int getting_string_length(char *str)
