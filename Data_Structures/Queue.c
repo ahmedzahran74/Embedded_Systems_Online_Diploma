@@ -33,15 +33,22 @@ FIFO_Buf_Status FIFO_Enqueue(FIFO_Buf_t* FIFO,ELEMENT_TYPE item)
 		else
 			FIFO->head++;
 		FIFO->count++;
+		printf("FIFO_Enqueue (%d) done\n",item);
 		return FIFO_No_Error;
 	}
 	else
+	{
+		printf("FIFO_Enqueue (%d) failed\n",item);
 		return FIFO_Full;
+	}
 }
 FIFO_Buf_Status FIFO_Dequeue(FIFO_Buf_t* FIFO,ELEMENT_TYPE *item)
 {
 	if(FIFO_Is_Empty(FIFO)==FIFO_Empty)
+	{
+		printf("FIFO_denqueue (%d) failed\n",*FIFO->tail);
 		return FIFO_Empty;
+	}
 	else
 	{
 		*item=*(FIFO->tail);
@@ -50,6 +57,7 @@ FIFO_Buf_Status FIFO_Dequeue(FIFO_Buf_t* FIFO,ELEMENT_TYPE *item)
 		else
 			FIFO->tail++;
 		FIFO->count--;
+		printf("FIFO_denqueue (%d) done\n",*(FIFO->tail)-1);
 		return FIFO_No_Error;
 	}
 }
