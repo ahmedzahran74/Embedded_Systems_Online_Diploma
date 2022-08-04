@@ -1,14 +1,23 @@
 /*
  * stack.h
+
  *
  *  Created on: Aug 1, 2022
  *      Author: AM
  */
-
+/*to make a stack first define array of any type
+ * just define the type of array using ELEMENT_TYPE macro
+ * then define array size using BUFFER_LENGTH macros
+ * then define a structure to hold the stack parameters
+ * you can make more than one queue
+ */
 #ifndef STACK_H_
 #define STACK_H_
 #include <stdint.h>
 #define ELEMENT_TYPE uint8_t
+#define BUFFER_LENGTH 10
+#define BUFFER_LENGTH_2 6
+
 
 typedef struct{
 	uint32_t length;

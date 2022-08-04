@@ -57,7 +57,7 @@ FIFO_Buf_Status FIFO_Dequeue(FIFO_Buf_t* FIFO,ELEMENT_TYPE *item)
 		else
 			FIFO->tail++;
 		FIFO->count--;
-		printf("FIFO_denqueue (%d) done\n",*(FIFO->tail)-1);
+		printf("FIFO_denqueue (%d) done\n",*item);
 		return FIFO_No_Error;
 	}
 }

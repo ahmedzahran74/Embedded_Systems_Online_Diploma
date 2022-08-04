@@ -1,16 +1,23 @@
 /*
  * Queue.h
 
+
  *
  *  Created on: Aug 1, 2022
  *      Author: AM
+ */
+/*to make a queue first define array of any type
+ * just define the type of array using ELEMENT_TYPE macro
+ * then define array size using width macros
+ * then define a structure to hold the queue parameters
+ * you can make more than one queue
  */
 #ifndef QUEUE_H_
 #define QUEUE_H_
 #include <stdint.h>
 #define width1 5
+#define width2 8
 #define ELEMENT_TYPE uint32_t
-ELEMENT_TYPE buff[width1];
 
 typedef struct {
 	uint32_t length;
