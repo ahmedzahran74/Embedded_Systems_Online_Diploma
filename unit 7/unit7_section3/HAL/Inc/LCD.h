@@ -2,7 +2,7 @@
  * lcd.h
  *
  * Created: Aug 29, 2022
- *  Author: Ahmed Zahrana
+ *  Author: Ahmed Zahran
  */
 
 
