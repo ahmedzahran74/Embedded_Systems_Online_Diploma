@@ -45,16 +45,18 @@ int main(void)
 				LCD_WRITE_CHAR(KEY);
 				count++;
 			}
+
 			else
 			{
 				count=0;
 				LCD_clear_screen();
 				LCD_WRITE_CHAR(KEY);
 			}
+
 			break;
 
 		}
-		}
+	}
 }
 
 
