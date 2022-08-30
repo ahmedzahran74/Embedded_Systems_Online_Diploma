@@ -15,24 +15,24 @@ int KEYPAD_C[]={C0,C1,C2,C3};
 void Keypad_init()
 {
 	PinCfg.GPIO_pin_number = R0;
-	PinCfg.GPIO_pin_mode = GPIO_MODE_OUTPUT_10M ;
-	PinCfg.GPIO_pin_CNF = GPIO_OUT_PUSHPULL ;
+	PinCfg.GPIO_pin_mode = GPIO_MODE_INPUT ;
+	PinCfg.GPIO_pin_CNF = GPIO_IN_PULLDOWN ;
 	MCAL_GPIO_Init(KEYPAD_PORT, &PinCfg);
 
 	PinCfg.GPIO_pin_number = R1;
-	PinCfg.GPIO_pin_mode = GPIO_MODE_OUTPUT_10M ;
-	PinCfg.GPIO_pin_CNF = GPIO_OUT_PUSHPULL ;
+	PinCfg.GPIO_pin_mode = GPIO_MODE_INPUT ;
+	PinCfg.GPIO_pin_CNF = GPIO_IN_PULLDOWN ;
 	MCAL_GPIO_Init(KEYPAD_PORT, &PinCfg);
 
 
 	PinCfg.GPIO_pin_number = R2;
-	PinCfg.GPIO_pin_mode = GPIO_MODE_OUTPUT_10M ;
-	PinCfg.GPIO_pin_CNF = GPIO_OUT_PUSHPULL ;
+	PinCfg.GPIO_pin_mode = GPIO_MODE_INPUT ;
+	PinCfg.GPIO_pin_CNF = GPIO_IN_PULLDOWN ;
 	MCAL_GPIO_Init(KEYPAD_PORT, &PinCfg);
 
 	PinCfg.GPIO_pin_number = R3;
-	PinCfg.GPIO_pin_mode = GPIO_MODE_OUTPUT_10M ;
-	PinCfg.GPIO_pin_CNF = GPIO_OUT_PUSHPULL ;
+	PinCfg.GPIO_pin_mode = GPIO_MODE_INPUT ;
+	PinCfg.GPIO_pin_CNF = GPIO_IN_PULLDOWN ;
 	MCAL_GPIO_Init(KEYPAD_PORT, &PinCfg);
 
 
@@ -55,7 +55,6 @@ void Keypad_init()
 	PinCfg.GPIO_pin_mode = GPIO_MODE_OUTPUT_10M ;
 	PinCfg.GPIO_pin_CNF = GPIO_OUT_PUSHPULL ;
 	MCAL_GPIO_Init(KEYPAD_PORT, &PinCfg);
-	MCAL_GPIO_Write_port(KEYPAD_PORT, 0xFF);
 }
 
 char Keypad_getkey()
@@ -64,18 +63,18 @@ char Keypad_getkey()
 	for (i=0;i<4;i++)
 	{
 
-		MCAL_GPIO_Write_Pin(KEYPAD_PORT, KEYPAD_C[0], HIGH);
-		MCAL_GPIO_Write_Pin(KEYPAD_PORT, KEYPAD_C[1], HIGH);
-		MCAL_GPIO_Write_Pin(KEYPAD_PORT, KEYPAD_C[2], HIGH);
-		MCAL_GPIO_Write_Pin(KEYPAD_PORT, KEYPAD_C[3], HIGH);
-		MCAL_GPIO_Write_Pin(KEYPAD_PORT, KEYPAD_C[i],LOW);
+		MCAL_GPIO_Write_Pin(KEYPAD_PORT, KEYPAD_C[0], LOW);
+		MCAL_GPIO_Write_Pin(KEYPAD_PORT, KEYPAD_C[1], LOW);
+		MCAL_GPIO_Write_Pin(KEYPAD_PORT, KEYPAD_C[2], LOW);
+		MCAL_GPIO_Write_Pin(KEYPAD_PORT, KEYPAD_C[3], LOW);
+		MCAL_GPIO_Write_Pin(KEYPAD_PORT, KEYPAD_C[i],HIGH);
 
 		for(j=0;j<4;j++)
 		{
 
-			if((MCAL_GPIO_Read_Pin(KEYPAD_PORT, KEYPAD_R[j]))==0)
+			if((MCAL_GPIO_Read_Pin(KEYPAD_PORT, KEYPAD_R[j]))==1)
 			{
-				while((MCAL_GPIO_Read_Pin(KEYPAD_PORT, KEYPAD_R[j]))==0);
+				while((MCAL_GPIO_Read_Pin(KEYPAD_PORT, KEYPAD_R[j]))==1);
 				switch(i)
 				{
 				case 0:
