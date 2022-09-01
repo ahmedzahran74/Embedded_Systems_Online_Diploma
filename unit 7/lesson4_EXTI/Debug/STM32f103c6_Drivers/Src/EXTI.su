@@ -1,0 +1,10 @@
+EXTI.c:30:6:EXTI_GPIO_Inite	24	static
+EXTI.c:84:6:EXTI_GPIO_DeInite	24	static
+EXTI.c:107:6:EXTI_GPIO_Update	16	static
+EXTI.c:129:6:EXTI0_IRQHandler	8	static
+EXTI.c:134:6:EXTI1_IRQHandler	8	static
+EXTI.c:139:6:EXTI2_IRQHandler	8	static
+EXTI.c:144:6:EXTI3_IRQHandler	8	static
+EXTI.c:149:6:EXTI4_IRQHandler	8	static
+EXTI.c:154:6:EXTI9_5_IRQHandler	8	static
+EXTI.c:183:6:EXTI15_10_IRQHandler	8	static
